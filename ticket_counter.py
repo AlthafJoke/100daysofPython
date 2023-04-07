@@ -16,6 +16,7 @@ adult_cost = 120
 child_cost = 60
 photography_charge = 20
 
+bill = 0
 
 
 if height >= height_limit:
@@ -36,20 +37,28 @@ if height >= height_limit:
       
     
     if age >= adult:
+        bill += adult_cost
+        
         if photography:
-            print(f"you need to pay {adult_cost + photography_charge}")
-        else:
-            print(f"you need to pay {adult_cost}")
+            bill +=  photography_charge
+        
+         
+    if age >= 45 and age <= 55:
+        bill = 0
+        print("Everything is have free ride on us")
         
     else:
+        bill += child_cost
         if photography:
-            print(f"you need to pay {child_cost + photography_charge}")
+           bill += photography_charge
         
-        else:
-            print(f"you need to pay {child_cost}")
-
+        
+      
 else:
     print("sorry, you can't ride the rollercoaster")
+    
+
+print(f"You need to pay {bill}")
 
 
 
