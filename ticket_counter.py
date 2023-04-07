@@ -1,4 +1,12 @@
 print("welcome to Rollercoaster!")
+print("""
+        Ticket price:
+      -----------------
+      Adult : $ 120
+      minor : $ 60
+      photography: $ 20
+      ------------------
+      """)
 
 height = float(input("What is your height in cm? : "))
 
