@@ -1,8 +1,6 @@
 print("**Leap year finder**")
 year = int(input("Enter the year to find the leap year: "))
 
-print(year / 400)
-
 
 if year % 4 == 0:
     if year % 100 == 0:
