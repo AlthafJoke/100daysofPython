@@ -13,14 +13,18 @@ photography_charge = 20
 if height >= height_limit:
     print("You can ride the rollercoaster")
     age = int(input("what is your age ?: "))
-    photography = (input("Do you want photography? yes or no ? :")).lower()
     
-    if photography == 'yes':
-        photography = True
-    elif photography == 'no':
-        photography = False
-    else:
-        print("please provide valid input")
+    while True:
+        photography = (input("Do you want photography? yes or no ? :")).lower()
+        
+        if photography == 'yes':
+            photography = True
+            break
+        elif photography == 'no':
+            photography = False
+            break
+        else:
+            print("please provide valid input")
       
     
     if age >= adult:
