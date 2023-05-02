@@ -7,11 +7,11 @@ value = "true"
 value2 = "love"
 
 
-def love_calculator(name, value1, value2):
+def love_calculator(name, value, value2):
     num1 = 0
     num2 = 0
-    
-    for i in value1:
+
+    for i in value:
         num1 += name.count(i)
     
     for i in value2:
@@ -23,10 +23,10 @@ def love_calculator(name, value1, value2):
 
 love_score = love_calculator(name, value, value2)
 
-if love_score > 90:
+if love_score < 10 or love_score > 90:
     print(f"Your score is {love_score} , you go together like coke and mentos.")
     
-elif love_score > 40 and love_score < 50:
+elif love_score >= 40 and love_score <= 50:
     print(f"Your score is {love_score} , you are alright together.")
 
 else:
